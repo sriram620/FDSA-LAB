@@ -1,0 +1,4 @@
+From numpy import mean 
+number_list = [45, 34, 10, 36, 12, 6, 80] avg 
+= mean(number_list) 
+print ("The average is ", round(avg,2))
