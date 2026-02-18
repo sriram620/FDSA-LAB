@@ -1,0 +1,12 @@
+fromnltk.corpusimport brown 
+cfd= nltk.ConditionalFreqDist([ (genre, word) for genre inbrown.categories() for word 
+inbrown.words(categories=genre) ]) cfd 
+cfd.conditions() 
+cfd.tabulate(conditions=['government', 'humor', 'reviews'],samples=['leadership', 'worship', 
+'hardship']) 
+cfd.plot(conditions=['government', 'humor', 'reviews'],samples=['leadership', 'worship', 'hardship']) 
+cfd.tabulate(conditions=['government', 'humor', 'reviews'], samples=['leadership', 'worship', 
+'hardship'], cumulative =True) 
+news_fd=cfd['news'] 
+news_fd.most_common(3) 
+news_fd['the'] 
